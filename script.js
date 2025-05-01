@@ -70,19 +70,19 @@ document.addEventListener("click",function(e){
 
 // ---------bg video mute-----------
 
-var video=document.querySelectorAll(".my_videos")
-var mute=document.querySelectorAll(".mute")
-var unmute=document.querySelectorAll(".unmute")
-for(i=0;i<mute.length;i=i++)
-    for(j=0;j<unmute.length;j++)
-mute[i].addEventListener("click",function(){
+var video=document.querySelector("#my_videos")
+var mute=document.querySelector("#mute")
+var unmute=document.querySelector("#unmute")
+// for(i=0;i<mute.length;i=i++)
+// for(j=0;j<unmute.length;j++)
+mute.addEventListener("click",function(){
     console.log("cll")
     video.muted=!video.muted
     mute.style.display="none"
     unmute.style.display="block"
 
 })
-unmute[j].addEventListener("click",function(){
+unmute.addEventListener("click",function(){
     video.muted=!video.muted
     mute.style.display="block"
     unmute.style.display="none"

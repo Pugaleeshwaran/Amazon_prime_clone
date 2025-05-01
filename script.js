@@ -53,3 +53,37 @@ document.addEventListener("click",function(e){
         profile_box.classList.add("hide")
     }
 })
+
+//----------------------hide menu-------------------
+
+var menu=document.querySelector(".header_name_hide")
+var slide=document.querySelector(".header_hide_menu")
+
+menu.addEventListener("click",function(){
+    slide.classList.toggle("hide")
+})
+document.addEventListener("click",function(e){
+    if(!slide.contains(e.target) && !menu.contains(e.target)){
+        slide.classList.add("hide")
+    }
+})
+
+// ---------bg video mute-----------
+
+var video=document.querySelectorAll(".my_videos")
+var mute=document.querySelectorAll(".mute")
+var unmute=document.querySelectorAll(".unmute")
+for(i=0;i<mute.length;i=i++)
+    for(j=0;j<unmute.length;j++)
+mute[i].addEventListener("click",function(){
+    console.log("cll")
+    video.muted=!video.muted
+    mute.style.display="none"
+    unmute.style.display="block"
+
+})
+unmute[j].addEventListener("click",function(){
+    video.muted=!video.muted
+    mute.style.display="block"
+    unmute.style.display="none"
+})

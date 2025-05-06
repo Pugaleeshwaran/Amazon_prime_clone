@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -61,19 +62,27 @@
                 <path
                     d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
             </svg>
-            <svg id="app" class="applogo" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960"
-                width="40px">
-                <path
-                    d="M240-160q-33 0-56.5-23.5T160-240q0-33 23.5-56.5T240-320q33 0 56.5 23.5T320-240q0 33-23.5 56.5T240-160Zm240 0q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm240 0q-33 0-56.5-23.5T640-240q0-33 23.5-56.5T720-320q33 0 56.5 23.5T800-240q0 33-23.5 56.5T720-160ZM240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400ZM240-640q-33 0-56.5-23.5T160-720q0-33 23.5-56.5T240-800q33 0 56.5 23.5T320-720q0 33-23.5 56.5T240-640Zm240 0q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Zm240 0q-33 0-56.5-23.5T640-720q0-33 23.5-56.5T720-800q33 0 56.5 23.5T800-720q0 33-23.5 56.5T720-640Z" />
-            </svg>
-            <svg id="save" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px">
-                <path
-                    d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z" />
-            </svg>
-            <svg id="profile" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px">
-                <path
-                    d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
-            </svg>
+            <div class="app_container">
+                <svg id="app" class="applogo" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960"
+                    width="40px">
+                    <path
+                        d="M240-160q-33 0-56.5-23.5T160-240q0-33 23.5-56.5T240-320q33 0 56.5 23.5T320-240q0 33-23.5 56.5T240-160Zm240 0q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm240 0q-33 0-56.5-23.5T640-240q0-33 23.5-56.5T720-320q33 0 56.5 23.5T800-240q0 33-23.5 56.5T720-160ZM240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400ZM240-640q-33 0-56.5-23.5T160-720q0-33 23.5-56.5T240-800q33 0 56.5 23.5T320-720q0 33-23.5 56.5T240-640Zm240 0q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Zm240 0q-33 0-56.5-23.5T640-720q0-33 23.5-56.5T720-800q33 0 56.5 23.5T800-720q0 33-23.5 56.5T720-640Z" />
+                </svg>
+            </div>
+            <div class="save_container">
+                <svg id="save" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px">
+                    <path
+                        d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z" />
+                </svg>
+            </div>
+            <div class="profile_container">
+                <svg id="profile" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960"
+                    width="40px">
+                    <path
+                        d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
+                </svg>
+            </div>
+
             <button>Join Prime</button>
         </div>
         <!-- <div class="header_hide">
@@ -179,48 +188,157 @@
     </div>
 
     <!-------------- background videos--------------- -->
-    <div class="video_container_main">
+    <div class="condainer">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
 
+                    <div class="bg_video">
+                        <video class="my_videos" id="my_videos1" src="./bg_videos/inter.mp4" autoplay muted loop
+                            poster="./bg_img/wallpaperflare.com_wallpaper.jpg"></video>
+                        <div class="bg_video_mute">
+                            <svg class="unmute" id="unmute1" xmlns="http://www.w3.org/2000/svg" height="35px"
+                                viewBox="0 -960 960 960" width="35px">
+                                <path
+                                    d="M280-360v-240h160l200-200v640L440-360H280Zm80-80h114l86 86v-252l-86 86H360v80Zm100-40Z" />
 
-        <div class="video_container">
-            <div class="bg_video">
-                <video class="my_videos" id="my_videos" src="./bg_videos/inter.mp4"autoplay muted loop
-                    poster="./bg_img/wallpaperflare.com_wallpaper.jpg"></video>
-                <div class="bg_video_mute">
-                    <svg class="unmute" id="unmute" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960"
-                        width="35px" >
-                        <path
-                            d="M280-360v-240h160l200-200v640L440-360H280Zm80-80h114l86 86v-252l-86 86H360v80Zm100-40Z" />
+                            </svg>
+                            <svg class="mute" id="mute1" xmlns="http://www.w3.org/2000/svg" height="35px"
+                                viewBox="0 -960 960 960" width="35px">
+                                <path
+                                    d="M792-56 671-177q-25 16-53 27.5T560-131v-82q14-5 27.5-10t25.5-12L480-368v208L280-360H120v-240h128L56-792l56-56 736 736-56 56Zm-8-232-58-58q17-31 25.5-65t8.5-70q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 53-14.5 102T784-288ZM650-422l-90-90v-130q47 22 73.5 66t26.5 96q0 15-2.5 29.5T650-422ZM480-592 376-696l104-104v208Zm-80 238v-94l-72-72H200v80h114l86 86Zm-36-130Z" />
+                            </svg>
+                        </div>
 
-                    </svg>
-                    <svg class="mute" id="mute" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px"
-                        >
-                        <path
-                            d="M792-56 671-177q-25 16-53 27.5T560-131v-82q14-5 27.5-10t25.5-12L480-368v208L280-360H120v-240h128L56-792l56-56 736 736-56 56Zm-8-232-58-58q17-31 25.5-65t8.5-70q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 53-14.5 102T784-288ZM650-422l-90-90v-130q47 22 73.5 66t26.5 96q0 15-2.5 29.5T650-422ZM480-592 376-696l104-104v208Zm-80 238v-94l-72-72H200v80h114l86 86Zm-36-130Z" />
-                    </svg>
+                        <div class="bg_video_ele">
+                            <h1>Interstellar</h1>
+                            <h3>Rating | ⭐9.6 | HD+</h3>
+                            <h3>Tamil | telugu | English | malayalam</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe ipsa dolor similique
+                                incidunt
+                                placeat veniam iure maiores magni,</p>
+                            <button><i class="fa-solid fa-play"></i>Watch Now</button>
+
+                        </div>
+
+                    </div>
                 </div>
 
-                <div class="bg_video_ele">
-                    <h1>Interstellar</h1>
-                    <h3>Rating | ⭐9.6 | HD+</h3>
-                    <h3>Tamil | telugu | English | malayalam</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe ipsa dolor similique incidunt
-                        placeat veniam iure maiores magni,</p>
-                    <button><i class="fa-solid fa-play"></i>Watch Now</button>
+                <div class="swiper-slide">
 
+                    <div class="bg_video">
+                        <video class="my_videos" id="my_videos2" src="./bg_videos/Homelander.mp4" autoplay muted
+                            loop></video>
+                        <div class="bg_video_mute">
+                            <svg class="unmute" id="unmute2" xmlns="http://www.w3.org/2000/svg" height="35px"
+                                viewBox="0 -960 960 960" width="35px">
+                                <path
+                                    d="M280-360v-240h160l200-200v640L440-360H280Zm80-80h114l86 86v-252l-86 86H360v80Zm100-40Z" />
+
+                            </svg>
+                            <svg class="mute" id="mute2" xmlns="http://www.w3.org/2000/svg" height="35px"
+                                viewBox="0 -960 960 960" width="35px">
+                                <path
+                                    d="M792-56 671-177q-25 16-53 27.5T560-131v-82q14-5 27.5-10t25.5-12L480-368v208L280-360H120v-240h128L56-792l56-56 736 736-56 56Zm-8-232-58-58q17-31 25.5-65t8.5-70q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 53-14.5 102T784-288ZM650-422l-90-90v-130q47 22 73.5 66t26.5 96q0 15-2.5 29.5T650-422ZM480-592 376-696l104-104v208Zm-80 238v-94l-72-72H200v80h114l86 86Zm-36-130Z" />
+                            </svg>
+                        </div>
+
+                        <div class="bg_video_ele">
+                            <h1>The Boys</h1>
+                            <h3>Rating | ⭐9.2 | HD+</h3>
+                            <h3>Tamil | telugu | English | malayalam</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe ipsa dolor similique
+                                incidunt
+                                placeat veniam iure maiores magni,</p>
+                            <button><i class="fa-solid fa-play"></i>Watch Now</button>
+
+                        </div>
+
+                    </div>
                 </div>
-                
+
+                <div class="swiper-slide">
+
+                    <div class="bg_video">
+                        <video class="my_videos" id="my_videos3" src="./bg_videos/OPTIMUSPRIME.mp4" autoplay muted
+                            loop></video>
+                        <div class="bg_video_mute">
+                            <svg class="unmute" id="unmute3" xmlns="http://www.w3.org/2000/svg" height="35px"
+                                viewBox="0 -960 960 960" width="35px">
+                                <path
+                                    d="M280-360v-240h160l200-200v640L440-360H280Zm80-80h114l86 86v-252l-86 86H360v80Zm100-40Z" />
+
+                            </svg>
+                            <svg class="mute" id="mute3" xmlns="http://www.w3.org/2000/svg" height="35px"
+                                viewBox="0 -960 960 960" width="35px">
+                                <path
+                                    d="M792-56 671-177q-25 16-53 27.5T560-131v-82q14-5 27.5-10t25.5-12L480-368v208L280-360H120v-240h128L56-792l56-56 736 736-56 56Zm-8-232-58-58q17-31 25.5-65t8.5-70q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 53-14.5 102T784-288ZM650-422l-90-90v-130q47 22 73.5 66t26.5 96q0 15-2.5 29.5T650-422ZM480-592 376-696l104-104v208Zm-80 238v-94l-72-72H200v80h114l86 86Zm-36-130Z" />
+                            </svg>
+                        </div>
+
+                        <div class="bg_video_ele">
+                            <h1>Transformers</h1>
+                            <h3>Rating | ⭐9.4 | HD+</h3>
+                            <h3>Tamil | telugu | English | malayalam</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe ipsa dolor similique
+                                incidunt
+                                placeat veniam iure maiores magni,</p>
+                            <button><i class="fa-solid fa-play"></i>Watch Now</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+
+                    <div class="bg_video">
+                        <video class="my_videos" id="my_videos4" src="./bg_videos/has.mp4" autoplay muted loop></video>
+                        <div class="bg_video_mute">
+                            <svg class="unmute" id="unmute4" xmlns="http://www.w3.org/2000/svg" height="35px"
+                                viewBox="0 -960 960 960" width="35px">
+                                <path
+                                    d="M280-360v-240h160l200-200v640L440-360H280Zm80-80h114l86 86v-252l-86 86H360v80Zm100-40Z" />
+
+                            </svg>
+                            <svg class="mute" id="mute4" xmlns="http://www.w3.org/2000/svg" height="35px"
+                                viewBox="0 -960 960 960" width="35px">
+                                <path
+                                    d="M792-56 671-177q-25 16-53 27.5T560-131v-82q14-5 27.5-10t25.5-12L480-368v208L280-360H120v-240h128L56-792l56-56 736 736-56 56Zm-8-232-58-58q17-31 25.5-65t8.5-70q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 53-14.5 102T784-288ZM650-422l-90-90v-130q47 22 73.5 66t26.5 96q0 15-2.5 29.5T650-422ZM480-592 376-696l104-104v208Zm-80 238v-94l-72-72H200v80h114l86 86Zm-36-130Z" />
+                            </svg>
+                        </div>
+
+                        <div class="bg_video_ele">
+                            <h1>Vinland Saga</h1>
+                            <h3>Rating | ⭐9.9 | HD+</h3>
+                            <h3>japanese | Tamil | telugu | English</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe ipsa dolor similique
+                                incidunt
+                                placeat veniam iure maiores magni,</p>
+                            <button><i class="fa-solid fa-play"></i>Watch Now</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                ...
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
 
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 
         </div>
 
 
-        </div>
-
-    </div>
-
-    <script src="./script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./script.js"></script>
 </body>
 
 </html>

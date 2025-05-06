@@ -70,20 +70,93 @@ document.addEventListener("click",function(e){
 
 // ---------bg video mute-----------
 
-var video=document.querySelector("#my_videos")
-var mute=document.querySelector("#mute")
-var unmute=document.querySelector("#unmute")
-// for(i=0;i<mute.length;i=i++)
-// for(j=0;j<unmute.length;j++)
-mute.addEventListener("click",function(){
+var video1=document.querySelector("#my_videos1")
+var mute1=document.querySelector("#mute1")
+var unmute1=document.querySelector("#unmute1")
+mute1.addEventListener("click",function(){
     console.log("cll")
-    video.muted=!video.muted
-    mute.style.display="none"
-    unmute.style.display="block"
+    video1.muted=!video1.muted
+    mute1.style.display="none"
+    unmute1.style.display="block"
 
 })
-unmute.addEventListener("click",function(){
-    video.muted=!video.muted
-    mute.style.display="block"
-    unmute.style.display="none"
+unmute1.addEventListener("click",function(){
+    video1.muted=!video1.muted
+    mute1.style.display="block"
+    unmute1.style.display="none"
 })
+
+var video2=document.querySelector("#my_videos2")
+var mute2=document.querySelector("#mute2")
+var unmute2=document.querySelector("#unmute2")
+mute2.addEventListener("click",function(){
+    console.log("cll")
+    video2.muted=!video2.muted
+    mute2.style.display="none"
+    unmute2.style.display="block"
+
+})
+unmute2.addEventListener("click",function(){
+    video2.muted=!video2.muted
+    mute2.style.display="block"
+    unmute2.style.display="none"
+})
+
+var video3=document.querySelector("#my_videos3")
+var mute3=document.querySelector("#mute3")
+var unmute3=document.querySelector("#unmute3")
+mute3.addEventListener("click",function(){
+    console.log("cll")
+    video3.muted=!video3.muted
+    mute3.style.display="none"
+    unmute3.style.display="block"
+
+})
+unmute3.addEventListener("click",function(){
+    video3.muted=!video3.muted
+    mute3.style.display="block"
+    unmute3.style.display="none"
+})
+
+
+
+var video4=document.querySelector("#my_videos4")
+var mute4=document.querySelector("#mute4")
+var unmute4=document.querySelector("#unmute4")
+mute4.addEventListener("click",function(){
+    console.log("cll")
+    video4.muted=!video4.muted
+    mute4.style.display="none"
+    unmute4.style.display="block"
+
+})
+unmute4.addEventListener("click",function(){
+    video4.muted=!video4.muted
+    mute4.style.display="block"
+    unmute4.style.display="none"
+})
+
+
+// ------------swiper-----------
+const swiper = new Swiper('.swiper', {
+    autoplay :{
+delay:10000,
+disableOnInteraction:false,
+    },
+    loop: true,
+    
+  
+    
+    pagination: {
+      el: '.swiper-pagination',
+      clickable:true,
+    },
+  
+   
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    
+  });

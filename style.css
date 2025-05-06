@@ -25,6 +25,7 @@ body {
     background-color: transparent;
     backdrop-filter: blur(5px);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 100;
 }
 
 .header_name {
@@ -295,16 +296,21 @@ body {
 }
 
 /* -------------genres-------------- */
+.app_container {
+    position: relative;
+}
+
 .genres {
     color: white;
-    position: relative;
+    position: absolute;
     background-color: #1e1f20;
     padding: 10px 20px;
     width: 35%;
     left: 59%;
     border-radius: 20px;
     display: block;
-
+    z-index: 20;
+    top: 12.5%;
 }
 
 .genres_srn {
@@ -426,9 +432,11 @@ li {
     font-style: normal;
     padding: 20px 20px;
     width: 10%;
-    position: relative;
+    position: absolute;
     left: 79%;
     border-radius: 10px;
+    z-index: 21;
+    top: 12.5%;
 
 }
 
@@ -462,10 +470,12 @@ li {
     font-style: normal;
     padding: 20px 20px;
     width: 15%;
-    position: relative;
+    position: absolute;
     left: 81%;
     border-radius: 10px;
     color: white;
+    z-index: 22;
+    top: 12;
 }
 
 .profile_box h2 {
@@ -498,19 +508,42 @@ li {
 }
 
 /* ---------------background videos------------ */
-.video_container_main {
+/* --------------swier----- */
+.condainer {
+    width: 98vw;
+    position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 0 18px;
 }
 
-.video_container {
-    margin: 10px 20px;
+.swiper {
     width: 100vw;
     max-height: 85vh;
     border: 1px rgb(255, 255, 255) solid;
     border-radius: 5px;
     overflow: hidden;
+}
 
+.swiper-slide video {
+    width: 100%;
+    height: 650px;
+    object-fit: fill;
+    filter: brightness(0.9);
+
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+    color: #ffffff;
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background-color: #ffffff;
+    width: 20px;
+    height: 5px;
+    border-radius: 2px;
 }
 
 .bg_video {
@@ -519,13 +552,16 @@ li {
     width: 100%;
     height: 100%;
     position: relative;
+
 }
 
 .bg_video video {
     width: 100%;
+    height: 630px;
     object-fit: fill;
     filter: brightness(0.9);
 }
+
 .bg_video_mute {
     position: absolute;
     color: white;
@@ -535,20 +571,23 @@ li {
     right: 5%;
     top: 8%;
     background-color: rgba(0, 0, 0, 0.5);
-    padding:15px 15px;
+    padding: 15px 15px;
     border-radius: 100%;
     display: grid;
     justify-content: center;
     align-items: center;
     fill: white;
 }
-.unmute{
+
+.unmute {
     display: none;
 }
-.bg_video_mute:hover{
+
+.bg_video_mute:hover {
     background: #e3e3e3;
     fill: black;
 }
+
 .bg_video_ele {
     position: absolute;
     color: white;
@@ -556,8 +595,8 @@ li {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
-    background:rgba(0,0,0,0.8);
-    width:40%;
+    background: rgba(0, 0, 0, 0.8);
+    width: 40%;
     height: 100%;
     left: 0;
     display: flex;
@@ -576,15 +615,16 @@ li {
     font-style: normal;
 }
 
-.bg_video_ele p,
-h3 {
+.bg_video_ele h3 {
     text-transform: capitalize;
+    white-space: nowrap;
 }
 
 .bg_video_ele p {
-    max-width: 100%;
+    width: 90%;
 }
-.bg_video_ele button{
+
+.bg_video_ele button {
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
@@ -596,18 +636,25 @@ h3 {
     font-style: normal;
     align-items: center;
 }
-.bg_video_ele button i{
+
+.bg_video_ele button i {
     margin-right: 5px;
 }
-.bg_video_ele::before{
+
+.bg_video_ele::before {
     content: "";
     position: absolute;
     top: 0;
     width: 90%;
     height: 100%;
     left: 100%;
-    background: linear-gradient(to right, rgba(0,0,0,0.8),rgba(0,0,0,0));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
+
+
+
+
+
 .hide {
     display: none;
 }
@@ -658,6 +705,18 @@ h3 {
     .profile_box h2 {
         font-size: 13px;
     }
+
+    .container {
+        height: 85vh;
+        width: 96vw;
+    }
+
+    .swiper {
+        margin: 10px 20px;
+        width: 90vw;
+        max-height: 85vh;
+
+    }
 }
 
 @media screen and (max-width:1200px) {
@@ -693,6 +752,26 @@ h3 {
         font-size: 10px;
     }
 
+    .container {
+        height: 75vh;
+        width: 96vw;
+    }
+
+    .swiper {
+        margin: 10px 20px;
+        width: 90vw;
+        max-height: 75vh;
+
+    }
+
+    .left_btn {
+        left: 3%;
+    }
+
+    .right_btn {
+        right: 4%;
+    }
+
 }
 
 @media screen and (max-width:900px) {
@@ -717,6 +796,27 @@ h3 {
 
     }
 
+    .container {
+        height: 75vh;
+        width: 96vw;
+    }
+
+    .swiper {
+        margin: 10px 20px;
+        width: 90vw;
+        max-height: 75vh;
+
+    }
+
+    .bg_video_ele p {
+        display: none;
+    }
+
+    .bg_video_ele h3 {
+        font-size: 12px;
+    }
+
+
 }
 
 @media screen and (max-width:600px) {
@@ -735,6 +835,19 @@ h3 {
         font-size: 5px;
         left: 2%;
     }
+
+    .container {
+        height: 65vh;
+        width: 96vw;
+    }
+
+    .swiper {
+        margin: 10px 20px;
+        width: 90vw;
+        max-height: 65vh;
+
+    }
+
 }
 
 /* ---------------------header done----------- */

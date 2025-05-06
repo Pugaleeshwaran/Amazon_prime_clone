@@ -166,3 +166,8 @@ window.addEventListener("scroll",function(){
     var elements=this.document.querySelectorAll(".webseries_section")
 })
 
+// ----------------movie scroll----------/
+
+window.addEventListener("scroll",function(){
+    var movieele=this.document.querySelectorAll(".movie_container")
+})

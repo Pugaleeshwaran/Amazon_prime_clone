@@ -882,7 +882,7 @@ text-align: center;
 
     .container {
         height: 75vh;
-        width: 96vw;
+        width: 90vw;
     }
 
     .swiper {
@@ -924,9 +924,10 @@ text-align: center;
 
     }
 
-    .container {
+    .condainer {
         height: 75vh;
-        width: 96vw;
+        width: 93vw;
+        margin-top: 10px;
     }
 
     .swiper {
@@ -947,6 +948,8 @@ text-align: center;
 
 }
 
+
+
 @media screen and (max-width:600px) {
 
     .profile_box {
@@ -964,9 +967,11 @@ text-align: center;
         left: 2%;
     }
 
-    .container {
+    .condainer {
+        width: 90vw;
         height: 65vh;
-        width: 96vw;
+        margin-top: 10px;
+        
     }
 
     .swiper {

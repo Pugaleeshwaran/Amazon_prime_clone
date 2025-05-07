@@ -139,10 +139,10 @@ unmute4.addEventListener("click", function () {
 
 // ------------swiper-----------
 const swiper = new Swiper('.swiper', {
-    autoplay: {
-        delay: 10000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 10000,
+    //     disableOnInteraction: false,
+    // },
     loop: true,
 
 

@@ -549,7 +549,6 @@ li {
     height: 5px;
     border-radius: 2px;
 }
-
 .bg_video {
     display: flex;
     justify-content: center;
@@ -708,8 +707,7 @@ li {
 .webseries_img img:hover{
     transition-duration: 500ms;
     transform: scale(1.1);
-    margin-bottom: 10px;
-    margin-bottom: 50px;
+
 }
 
 /* -------------movie container-------------- */

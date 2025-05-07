@@ -462,7 +462,11 @@ li {
 }
 
 /* -----------------profile--------------- */
-
+#profile{
+    width: 40px;
+    height:40px;
+    fill: white;
+}
 .profile_box {
     background-color: #1e1f20;
     font-family: "Poppins", sans-serif;
@@ -1002,9 +1006,20 @@ text-align: center;
 }
 
 @media screen and (max-width:480px) {
-    .profile_container{
-        left: 2%;
+    #profile{
+        width: 35px;
+        height: 35px;
     }
+    #search_btn{
+        width: 35px;
+        height: 35px;
+    }
+    .header_name h2{
+        font-size: 16px;
+    }
+     .header_two{
+        gap: 1%;
+     }
 
     .profile_box h2 {
         font-size: 7px;
@@ -1052,7 +1067,8 @@ text-align: center;
 
     .profile_container{
         left: 2%;
-        display: none;
+        width: 45px;
+        height:45px;
     }
     @media screen and (min-width:440px) {
         .profile_box {
